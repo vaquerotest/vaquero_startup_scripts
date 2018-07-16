@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-
+ 
 docker run \
     --name server \
     -d \
