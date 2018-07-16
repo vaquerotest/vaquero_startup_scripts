@@ -1,0 +1,53 @@
+---
+ServerAPI:
+  Addr: 172.29.87.69
+  Port: 24601
+  PrivateKey: "/vaquero/secret/server.key"
+  PublicKey: "/vaquero/secret/server.pem"
+ServerClient:
+  Addr: 172.29.87.69
+  Port: 24601
+  InsecureSkipVerify: true
+SavePath: "/var/vaquero"
+LocalDir:
+  PollInterval: 1
+SoT:
+- Git:
+    ID: site
+    HookID: site
+    Branch: master
+#- Git:
+#   ID: denver
+#   HookID: denver
+#   Branch: master
+Gitter:
+   Endpoint: "/postreceive"
+   Timeout: 5
+   Addr: 172.29.87.69
+   Port: 24603
+GitHook:
+- ID: vaquero-prod-config
+  Token: 168b259a358765a009f7b44a961434e30f1e0c70
+  URL: "https://github.com/vaquerotest/vaquero-prod-config"
+  Secret: "cisco123"
+- ID: vaquero-dev-config
+  Token: 168b259a358765a009f7b44a961434e30f1e0c70
+  URL: "https://github.com/vaquerotest/vaquero-dev-config"
+  Secret: "cisco123"
+#- ID: reno
+#  Token: 168b259a358765a009f7b44a961434e30f1e0c70
+#  URL: "https://github.com/vaquerotest/vaquero-sites"
+#  Secret: "cisco123"
+#- ID: denver
+#  Token: 168b259a358765a009f7b44a961434e30f1e0c70
+#  URL: "https://github.com/vaquerotest/vaquero-sites"
+#  Secret: "cisco123"
+- ID: site
+  Token: 168b259a358765a009f7b44a961434e30f1e0c70
+  URL: "https://github.com/vaquerotest/vaquero-sites"
+  Secret: "cisco123"
+Log:
+  Level: debug
+  Location: stdout
+  Type: text
+ 
