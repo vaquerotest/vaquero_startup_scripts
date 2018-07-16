@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-
+ 
 docker run \
     --name agent-2 \
     -d \
@@ -14,7 +14,7 @@ docker run \
     --privileged \
     -e VAQUERO_SHARED_SECRET="<secret>" \
     -e VAQUERO_SERVER_SECRET="<secret>" \
-    -e VAQUERO_SITE_ID="site2" \
+    -e VAQUERO_SITE_ID="reno" \
     -e VAQUERO_AGENT_ID="agent2" \
     vaquero-vasu \
         agent --config /vaquero/config.yaml --log-level debug
